@@ -1,13 +1,13 @@
 // components/UI/HeroSlider/HeroSlider.jsx
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { useTranslation } from 'react-i18next';
-import SlideMedia from './SlideMedia';
-import { ImageUrl, serverUrl } from '../../../services/url';
-import axios from 'axios';
-import Loading from '../Loading';
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+import SlideMedia from "./SlideMedia";
+import { ImageUrl, serverUrl } from "../../../services/url";
+import axios from "axios";
+import Loading from "../Loading";
 
 const HeroSlider = () => {
   const { t } = useTranslation();
@@ -17,31 +17,31 @@ const HeroSlider = () => {
   const videoRef = useRef(null);
 
   const defaultBanner = {
-    id: 'fallback',
+    id: "fallback",
     media: {
-      type: 'image',
+      type: "image",
       url: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop&crop=center",
-      altText: "Fallback banner"
+      altText: "Fallback banner",
     },
-    title: t('WelcomeToOurStore'),
-    subtitle: t('discover Our Collections'),
+    title: t("WelcomeToOurStore"),
+    subtitle: t("discover Our Collections"),
     // cta: t('shopNow'),
     link: "/shop",
-    textPosition: "center"
+    textPosition: "center",
   };
 
   useEffect(() => {
     const fetchBanners = async () => {
       try {
         const { data } = await axios.get(`${serverUrl}/home/banners`);
-        console.log(data);        
+        console.log(data);
         if (data.success && data.banners?.length > 0) {
           setSlides(data.banners);
         } else {
           setSlides([defaultBanner]);
         }
       } catch (error) {
-        console.error('Error fetching banners:', error);
+        console.error("Error fetching banners:", error);
         setSlides([defaultBanner]);
       } finally {
         setLoading(false);
@@ -52,7 +52,7 @@ const HeroSlider = () => {
 
   useEffect(() => {
     const current = slides[currentSlide];
-    if (current?.media?.type !== 'video' && slides.length > 1) {
+    if (current?.media?.type !== "video" && slides.length > 1) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
       }, 5000);
@@ -62,7 +62,7 @@ const HeroSlider = () => {
 
   useEffect(() => {
     const current = slides[currentSlide];
-    const isVideo = current?.media?.type === 'video';
+    const isVideo = current?.media?.type === "video";
     if (isVideo && videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(console.warn);
@@ -70,20 +70,22 @@ const HeroSlider = () => {
   }, [slides, currentSlide]);
 
   const getTextAlignment = (position) => {
-    return {
-      left: 'text-left justify-start',
-      center: 'text-center justify-center',
-      right: 'text-right justify-end'
-    }[position] || 'text-left justify-start';
+    return (
+      {
+        left: "text-left justify-start",
+        center: "text-center justify-center",
+        right: "text-right justify-end",
+      }[position] || "text-left justify-start"
+    );
   };
 
   const currentSlideData = slides[currentSlide] || defaultBanner;
 
   const mediaInfo = {
-   url: currentSlideData.media?.url?.startsWith("http")
-    ? currentSlideData.media.url
-    : `${ImageUrl}${currentSlideData.media.url}`, 
-    type: currentSlideData.media?.type || 'image',
+    url: currentSlideData.media?.url?.startsWith("http")
+      ? currentSlideData.media.url
+      : `${ImageUrl}${currentSlideData.media.url}`,
+    type: currentSlideData.media?.type || "image",
     altText: currentSlideData.media?.altText || currentSlideData.title,
   };
 
@@ -114,7 +116,9 @@ const HeroSlider = () => {
             url={mediaInfo.url}
             altText={mediaInfo.altText}
             ref={videoRef}
-            onEnded={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+            onEnded={() =>
+              setCurrentSlide((prev) => (prev + 1) % slides.length)
+            }
             onError={() => {
               setSlides([defaultBanner]);
               setCurrentSlide(0);
@@ -124,7 +128,11 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className={`relative z-10 h-full flex items-center ${getTextAlignment(currentSlideData.textPosition)}`}>
+      <div
+        className={`relative z-10 h-full flex items-center ${getTextAlignment(
+          currentSlideData.textPosition
+        )}`}
+      >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl">
             <motion.h1
@@ -132,7 +140,7 @@ const HeroSlider = () => {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative -left-20 text-3xl lg:text-6xl font-light text-white mb-4 tracking-tight leading-tight"
+              className="text-3xl lg:text-6xl font-light text-white mb-4 tracking-tight leading-tight"
             >
               {currentSlideData.title}
             </motion.h1>
@@ -145,6 +153,21 @@ const HeroSlider = () => {
             >
               {currentSlideData.subtitle}
             </motion.p>
+            <motion.div
+              key={`cta-${currentSlide}`}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex justify-center sm:justify-start gap-4"
+            >
+              <Link
+                to={currentSlideData.link || "/shop"}
+                className="px-8 py-3 bg-white text-black text-base font-medium rounded-full shadow-sm border border-transparent transition-all duration-300 hover:bg-black hover:text-white"
+              >
+                {t("shopNow") || "Shop Now"}
+              </Link>
+            </motion.div>
+
             {/* <motion.div
               key={`cta-${currentSlide}`}
               initial={{ opacity: 0, y: 30 }}
@@ -163,23 +186,20 @@ const HeroSlider = () => {
       </div>
 
       {slides.length > 1 && (
-      
-       
-      
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-            {slides.map((_, index) => (
-              <button
-              
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`hidden w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'
-                }`}
-                aria-label={`${t('goToSlide')} ${index + 1}`}
-              />
-            ))}
-          </div>
-       
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`hidden w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? "bg-white scale-125"
+                  : "bg-white/50 hover:bg-white/80"
+              }`}
+              aria-label={`${t("goToSlide")} ${index + 1}`}
+            />
+          ))}
+        </div>
       )}
     </section>
   );

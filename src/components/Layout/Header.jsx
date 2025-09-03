@@ -250,7 +250,7 @@ const Header = () => {
           isRTL ? "rtl" : "ltr"
         }`}
       >
-        <div className="container mx-auto py-7 px-4 lg:px-6 ">
+        <div className="container mx-auto py-3 px-4 lg:px-6 ">
           <div
             className={`flex items-center justify-between h-16 lg:h-20 ${
               isRTL ? "flex-row-reverse" : ""
@@ -281,7 +281,7 @@ const Header = () => {
                 <img
                   src={Logo}
                   alt="UAE"
-                  className="h-16 px-4 sm:h-12 w-auto"
+                  className="h-20 px-4 sm:h-20 w-auto"
                 />
               </div>
             </Link>
