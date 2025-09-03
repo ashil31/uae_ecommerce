@@ -7,13 +7,13 @@ import { performLogout, shouldLogoutUser } from '../utils/authUtils';
 import { handleApiError, logError } from '../utils/errorHandler';
 
 const axiosInstance = axios.create({
-  baseURL: serverUrl || 'https://uae-project-1.onrender.com/api',
+  baseURL: serverUrl || 'http://localhost:4000/api',
   withCredentials: true,
 });
 
 // ✅ Use raw axios without interceptors for refresh call
 const rawAxios = axios.create({
-  baseURL: serverUrl || 'https://uae-project-1.onrender.com/api',
+  baseURL: serverUrl || 'http://localhost:4000/api',
   withCredentials: true,
 });
 
