@@ -1,0 +1,631 @@
+
+{
+  "nav": {
+    "home": "Home",
+    "men": "Men",
+    "menu": "Menu",
+    "women": "Women",
+    "newIn": "New In",
+    "kids": "Kids",
+    "leathergoods": "Leather Goods",
+    "readyToWear": "Ready to Wear",
+    "accessories": "Accessories",
+    "sale": "Sale",
+    "about": "About",
+    "contact": "Contact",
+    "account": "Account",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "search": "Search",
+    "shop": "Shop",
+    "lookbook": "Lookbook",
+    "wholesale": "Wholesale"
+
+  },
+  "home": {
+    "heroTitle": "Discover Luxury Fashion",
+    "heroSubtitle": "Premium collections for the modern lifestyle",
+    "shopNow": "Shop Now",
+    "newArrivals": "New Arrivals",
+    "featuredProducts": "Featured Products",
+    "categories": "Shop by Category",
+    "categoryDescription": "Discover our curated collections for the modern lifestyle",
+    "bestSeller": "Best Sellers",
+     "topCollection": "Our top collection",
+    "luxuryTagline": "Handpicked luxury items from our exclusive collection",
+     "newArrivalsSubtitle": "Discover our latest luxury collections",
+       "featuredLine": "Featured products and Handpicked selections from our latest collections",
+       "trendingLine":"Trending products loved by our customers",
+       "popularLine":"Popular products loved by our customers",
+       "seasonPopular": "Our most popular products this season",
+       "popularItems": "Popular Items"
+  },
+  "menu": {
+    "men": "Men",
+    "women": "Women",
+    "newIn": "New In",
+    "readyToWear": "Ready To Wear",
+    "accessories": "Accessories",
+    "clothing": "Clothing",
+    "featured": "Featured",
+    "accessoriesSection": "Accessories",
+    "collections": "Collections",
+    "shirt": "Shirt",
+    "t-shirt": "T-Shirt",
+    "suit": "Suit",
+    "jacket": "Jacket",
+    "trouser": "Trouser",
+    "jeans": "Jeans",
+    "knitwear": "Knitwear",
+    "activewear": "Activewear",
+    "watches": "Watches",
+    "bags": "Bags",
+    "shoes": "Shoes",
+    "belts": "Belts",
+    "sunglasses": "Sunglasses",
+    "ties": "Ties",
+    "dresses": "Dresses",
+    "tops": "Tops",
+    "skirts": "Skirts",
+    "pants": "Pants",
+    "handbags": "Handbags",
+    "jewelry": "Jewelry",
+    "scarves": "Scarves",
+    "newarrivals": "New Arrivals",
+    "bestsellers": "Best Sellers",
+    "sale": "Sale",
+    "lookbook": "Lookbook",
+    "allNewArrivals": "All New Arrivals",
+    "thisWeek": "This Week",
+    "last30Days": "Last 30 Days",
+    "comingSoon": "Coming Soon",
+    "casual": "Casual",
+    "business": "Business",
+    "formal": "Formal",
+    "weekend": "Weekend",
+    "evening": "Evening",
+    "springCollection": "Spring Collection",
+    "summerCollection": "Summer Collection",
+    "designerCollections": "Designer Collections",
+    "backpacks": "Backpacks",
+    "briefcases": "Briefcases",
+    "travelBags": "Travel Bags",
+    "necklaces": "Necklaces",
+    "bracelets": "Bracelets",
+    "earrings": "Earrings",
+    "rings": "Rings"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "addToWishlist": "Add to Wishlist",
+    "removeFromWishlist": "Remove from Wishlist",
+    "selectSize": "Select Size",
+    "sizeGuide": "Size Guide",
+    "description": "Description",
+    "details": "Details",
+    "shipping": "Shipping & Returns",
+    "reviews": "Reviews",
+    "relatedProducts": "Related Products",
+    "color": "Color",
+    "size": "Size",
+    "freeShipping": "Free shipping on orders over 500 AED",
+    "returns": "30-day return policy",
+    "reviewsTitle": "Customer Reviews",
+  "noReviews": "No reviews yet.",
+  "yourRating": "Your Rating",
+  "yourReview": "Your Review",
+  "reviewPlaceholder": "Share your experience...",
+  "submitReview": "Submit Review",
+  "loginToReview": "Please ",
+  "login": "log in",
+  "toLeaveReview": "to leave a review.",
+  "reviewSuccess": "Review submitted",
+  "errorComment": "Please enter a comment",
+  "errorRating": "Please select a rating",
+   "choosePurchaseOption": "Choose Purchase Option",
+      "combo": "Combo",
+      "comboDesc": "Complete outfit",
+      "comboSavings": "Save 20%",
+      "shirt": "Shirt Only",
+      "pant": "Pant Only",
+      "purchaseOption": "Purchase Option",
+      "change": "Change",
+      "completeOutfitWithSavings": "Complete outfit with savings",
+      "shirtOnly": "Shirt only",
+      "pantOnly": "Pant only",
+      "selected": "Selected",
+      "addedAsCombo": "Added as Combo",
+      "addedAsShirt": "Added as Shirt",
+      "addedAsPant": "Added as Pant"
+  },
+  "topCollection": {
+    "title": "Our Top Collection",
+    "subtitle": "Handpicked luxury items from our exclusive collection",
+    "viewAll": "View All Collection",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to cart!",
+    "addedToWishlist": "Added to wishlist!",
+    "badge": {
+      "new": "New",
+      "sale": "Sale",
+      "limited": "Limited",
+      "exclusive": "Exclusive"
+    }
+  },
+  "bestRated": {
+    "title": "Best Rated Products",
+    "subtitle": "Customer favorites with the highest ratings and reviews",
+    "viewAll": "View All Products"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyMessage": "Start shopping to add items to your cart",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "checkout": "Checkout",
+    "continueShopping": "Continue Shopping",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "orderSummary": "Order Summary",
+    "freeShippingPromo": "Add {{amount}} AED more for free shipping!"
+  },
+  "wishlist": {
+    "empty": "Your wishlist is empty",
+    "emptyMessage": "Save items you love to your wishlist",
+    "startShopping": "Start Shopping",
+    "moveToCart": "Move to Cart",
+    "saveProgress": "Save your progress",
+    "loginMessage": "Login to save your wishlist across devices"
+  },
+  "shop": {
+    "filters": "Filters",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters",
+    "priceRange": "Price Range",
+    "brands": "Brands",
+    "colors": "Colors",
+    "sizes": "Sizes",
+    "relevance": "Relevance",
+    "popular": "Most Popular",
+    "priceLowToHigh": "Price: Low to High",
+    "priceHighToLow": "Price: High to Low",
+    "itemsFound": "items found",
+    "noProductsFound": "No products found",
+    "tryAdjustingFilters": "Try adjusting your filters",
+    "clearAllFilters": "Clear All Filters"
+  },
+  "checkout": {
+    "contactInfo": "Contact Information",
+    "shippingAddress": "Shipping Address",
+    "paymentMethod": "Payment Method",
+    "creditCard": "Credit Card",
+    "cashOnDelivery": "Cash on Delivery",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "orderPlaced": "Order placed successfully!",
+    "orderFailed": "Failed to place order. Please try again.",
+    "orderComplete": "Order Complete!",
+    "orderCompleteMessage": "Thank you for your order. We'll send you a confirmation email shortly.",
+    "orderDetails": "Order Details",
+    "orderId": "Order ID",
+    "items": "Items",
+    "viewOrders": "View My Orders",
+    "continueShopping": "Continue Shopping"
+  },
+  
+  "categories": {
+    "topCategories": "Top Categories",
+    "Men": "Men",
+    "Women": "Women",
+    "shirt": "Shirts",
+    "handbags": "Handbags",
+    "clothing": "Clothing",
+    "jacket": "Jackets",
+    "watches": "Watches",
+    "dress": "Dresses",
+    "shoes": "Shoes",
+    "jeans": "Jeans"
+  }
+,
+  "auth": {
+    "login": "Login",
+    "logoutSuccess": "Logout Successfully",
+    "loginSuccess": "Logged in Successfully",
+    "register": "Register",
+    "email": "Email",
+    "phone": "Phone Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "forgotPassword": "Forgot Password?",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "loginToCheckout": "Login to Checkout",
+    "guestCheckoutNote": "Guest checkout available",
+    "orContinueWith": "Or continue with",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook"
+  },
+  "account": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "orders": "Orders",
+    "addresses": "Addresses",
+    "settings": "Settings",
+    "logout": "Logout",
+    "myAccount": "My Account"
+  },
+"contact": {
+  "title": "Contact Us",
+  "formTitle": "Send Us a Message",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Send Message",
+  "successMessage": "Your message has been sent!",
+  "infoTitle": "Contact Information",
+  "addressTitle": "Our Address",
+  "addressLine1": "123 Fashion Street",
+  "addressLine2": "Building B, Floor 2",
+  "addressCity": "Dubai",
+  "addressCountry": "UAE",
+  "phoneTitle": "Phone",
+  "emailTitle": "Email",
+  "hoursTitle": "Business Hours",
+  "hours": "Mon - Fri: 9am - 6pm",
+  "subjectOptions": {
+    "general": "General Inquiry",
+    "support": "Support Request",
+    "wholesale": "Wholesale Inquiry",
+    "returns": "Returns and Refunds",
+    "complaint": "Complaint",
+    "product": "Product Queries",
+    "order": "Order Queries",
+    "Business": "Business Enquiries",
+    "other": "Other"
+  }
+},
+
+
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "currency": "AED",
+    "free": "Free",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "viewAll": "View All",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "freeShipping": "Free shipping on orders over 500 AED",
+    "returnPolicy": "30-day returns",
+    "prev": "Previous products",
+    "next": "Next products",
+    "selectSize":"Select Size"
+  },
+  "storeLocator": {
+    "title": "Find a Store",
+    "searchPlaceholder": "Search by name or location",
+    "noResults": "No stores found.",
+    "address": "Address",
+    "phone": "Phone",
+    "hours": "Hours"
+  },
+
+
+  "payment": {
+    "successTitle": "Payment Successful!",
+    "successMessage": "Thank you for your purchase. A confirmation email has been sent to you.",
+    "continueShopping": "Continue Shopping",
+    "cancelTitle": "Payment Canceled",
+    "cancelMessage": "Your payment was not completed. You can try again or return to the shop.",
+    "returnToShop": "Return to Shop",
+    "successToast": "Your order was placed successfully!",
+    "cancelToast": "Payment was canceled."
+  },
+  
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "We’re always looking for passionate people to join our growing family.",
+    "apply": "Apply Now",
+    "general": "Don't see a position that fits?",
+    "sendResume": "Send us your resume"
+  },
+
+  "returns": {
+    "title": "Return Policy",
+    "intro": "Your satisfaction is important to us. You can return items within 14 days of receiving them.",
+    "conditionsTitle": "Return Conditions",
+    "conditions": [
+      "Items must be unused and in perfect condition.",
+      "Original packaging must be intact.",
+      "Proof of purchase is required."
+    ],
+    "faqTitle": "Returns FAQ"
+  },
+
+  "shipping": {
+    "title": "Shipping Information",
+    "delivery": "We offer fast and secure delivery across the UAE.",
+    "processing": "Processing time: 1–2 business days.",
+    "deliveryTime": "Delivery time: 2–5 business days.",
+    "shippingPartners": "Our Delivery Partners",
+    "tracking": "You will receive a tracking link via email once your order is shipped."
+  },
+
+  "sizeGuide": {
+    "title": "Size Guide",
+    "description": "Use this chart to help determine your correct size.",
+    "measurements": {
+      "bust": "Bust",
+      "waist": "Waist",
+      "hips": "Hips"
+    }
+  },
+
+  "contactus": {
+    "title": "Contact Us",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "formTitle": "Contact Form",
+    "name": "Name",
+    "message": "Your Message",
+    "submit": "Submit",
+    "successMessage": "Your message has been successfully sent. We will get back to you soon!"
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "How can I track my order?",
+        "a": "Once your order is shipped, you will receive a tracking link via email."
+      },
+      {
+        "q": "Can I change my order after placing it?",
+        "a": "Yes, within 1–2 hours of placing the order. Please contact us immediately."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "We accept credit cards and cash on delivery within the UAE."
+      },
+      {
+        "q": "Do you ship internationally?",
+        "a": "Currently, we only ship within the United Arab Emirates."
+      }
+    ]
+  },
+  
+  "press": {
+  "title": "Latest Press Coverage",
+  "searchPlaceholder": "Search press releases...",
+  "categories": {
+    "all": "All",
+    "awards": "Awards",
+    "partnership": "Partnership",
+    "launch": "Launch"
+  },
+  "1": {
+    "title": "Best E-Commerce Brand in UAE",
+    "description": "Recognized for design, speed, and innovation in regional awards."
+  },
+  "2": {
+    "title": "New Partnership with FedEx UAE",
+    "description": "We're proud to offer faster, tracked deliveries across all Emirates."
+  },
+  "3": {
+    "title": "Launch of Sustainable Fashion Line",
+    "description": "Eco-conscious collections now available with global shipping."
+  }
+},
+"sustainability": {
+  "title": "Our Commitment to Sustainability",
+  "description": "We believe in responsible fashion, eco-conscious materials, and community-driven impact.",
+  "values": [
+    {
+      "title": "Eco-Friendly Materials",
+      "description": "All our products use organic cotton, recycled fabrics, and low-impact dyes."
+    },
+    {
+      "title": "Waste Reduction",
+      "description": "We minimize production waste through efficient cutting and repurposing."
+    },
+    {
+      "title": "Global Impact",
+      "description": "We support carbon-neutral shipping and offset environmental footprints."
+    },
+    {
+      "title": "Fair Trade",
+      "description": "Ethical labor practices and community partnerships are our foundation."
+    }
+  ]
+},
+"privacy": {
+  "title": "Privacy & Data Protection",
+  "description": "We are committed to protecting your personal data and being transparent about how we use it.",
+  "sections": [
+    {
+      "title": "Your Data is Secure",
+      "description": "We use encryption and industry best practices to keep your information safe and private."
+    },
+    {
+      "title": "No Data Sold",
+      "description": "We never sell or rent your personal data to third parties, ever."
+    },
+    {
+      "title": "Full Transparency",
+      "description": "You can view, edit, or delete your data at any time via your account settings."
+    },
+    {
+      "title": "Global Compliance",
+      "description": "We comply with GDPR, CCPA, and other global privacy regulations."
+    }
+  ]
+},
+"terms": {
+  "title": "Terms of Service",
+  "sections": {
+    "intro": {
+      "title": "Introduction",
+      "description": "By using our website, you agree to comply with our terms and policies outlined here."
+    },
+    "usage": {
+      "title": "Acceptable Use",
+      "description": "You agree not to misuse the website or services, and not to violate any laws."
+    },
+    "account": {
+      "title": "User Accounts",
+      "description": "You're responsible for maintaining the confidentiality of your account credentials and activity."
+    },
+    "limitation": {
+      "title": "Limitation of Liability",
+      "description": "We are not liable for indirect or incidental damages arising from your use of our services."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "description": "These terms are governed by the laws of the UAE, without regard to conflict of law principles."
+    }
+  }
+},
+"cookie": {
+  "title": "Cookie Policy",
+  "sections": {
+    "whatAreCookies": {
+      "title": "What Are Cookies?",
+      "description": "Cookies are small text files stored on your device to help websites function efficiently and provide personalized experiences."
+    },
+    "howWeUseCookies": {
+      "title": "How We Use Cookies",
+      "description": "We use cookies to enhance user experience, analyze traffic, and remember your preferences."
+    },
+    "typesOfCookies": {
+      "title": "Types of Cookies We Use",
+      "description": "We use essential, performance, functionality, and targeting cookies to deliver a tailored browsing experience."
+    },
+    "yourChoices": {
+      "title": "Your Choices",
+      "description": "You can manage your cookie preferences through your browser settings or our cookie consent tool."
+    },
+    "changesToPolicy": {
+      "title": "Changes to This Policy",
+      "description": "We may update this policy periodically. Any changes will be posted on this page with a revised date."
+    }
+  }
+},
+"accessibility": {
+  "title": "Our Commitment to Accessibility",
+  "sections": {
+    "commitment": {
+      "title": "Accessibility Commitment",
+      "description": "We are dedicated to ensuring digital accessibility for everyone, including individuals with disabilities."
+    },
+    "inclusiveDesign": {
+      "title": "Inclusive Design",
+      "description": "Our platform is designed to be inclusive from the ground up, considering a wide range of user needs and preferences."
+    },
+    "assistiveTech": {
+      "title": "Support for Assistive Technologies",
+      "description": "We support screen readers, keyboard navigation, and other assistive tools to improve user experience."
+    },
+    "ongoingImprovements": {
+      "title": "Ongoing Improvements",
+      "description": "Accessibility is a continuous process. We regularly test and update our site to ensure compliance and usability."
+    },
+    "contactSupport": {
+      "title": "Contact Support",
+      "description": "Need help? Reach out to our support team for any accessibility-related issues or feedback."
+    }
+  }
+},
+
+
+  "footer": {
+    "brandName": "UAE",
+    "description": "Premium fashion for the modern lifestyle. Discover our curated collection of luxury clothing and accessories.",
+    "location": "Dubai Mall, Dubai, UAE",
+    "getinTouch": "Get in touch",
+    "company": "Company",
+    "legal": "Legal & Cookies",
+    "services": "Services",
+    "links": {
+      "contactUs": "Contact Us",
+      "sizeGuide": "Size Guide",
+      "shippingInfo": "Shipping Info",
+      "returns": "Returns & exchange",
+      "del": "Delivery & shipping",
+      "faq": "FAQ",
+      "uae": "UAE",
+      "careers": "Careers",
+      "press": "Press",
+      "service": "Services",
+      "sustainability": "Sustainability",
+      "storeLocator": "Store Locator",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "accessibility": "Accessibility"
+    },
+    "copyright": "© {{year}} UAE. All rights reserved."
+  },
+
+ 
+  "wholesale": {
+    "pageTitle": "Wholesale Catalog",
+    "pageDescription": "Exclusive bulk pricing for registered wholesale customers. MOQ applies.",
+    "seoTitle": "Wholesale - B2B Fashion Solutions | UAE",
+    "seoDescription": "Explore UAE wholesale opportunities for retailers. Bulk ordering, competitive pricing, and premium fashion collections for your business.",
+    "seoKeywords": "wholesale fashion, B2B clothing, bulk orders, fashion retailers UAE",
+    "fallbackTitle": "Wholesale - UAE Fashion",
+    "formTitle": "Wholesale Inquiry Form",
+    "perks": {
+      "bulkPricingTitle": "Bulk Pricing",
+      "bulkPricingDesc": "Save up to 40% on MOQ orders",
+      "shippingTitle": "Free Shipping",
+      "shippingDesc": "Available on all wholesale orders",
+      "paymentTitle": "Payment Terms",
+      "paymentDesc": "Flexible for verified businesses"
+    },
+    "moq": "MOQ: {{count}} units",
+    "availability": {
+      "inStock": "In Stock",
+      "limitedStock": "Limited Stock"
+    },
+    "bulkPricingLabel": "Bulk Pricing",
+    "minQty": "Min {{count}}: {{price}} AED",
+    "requestQuote": "Request Quote",
+    "customSolutionsTitle": "Need Custom Solutions?",
+    "customSolutionsDesc": "Contact our team for large orders, brand collaborations, or tailored pricing plans.",
+    "contactTeam": "Contact Wholesale Team"
+  },
+
+
+  "wholesaleForm": {
+    "title": "Wholesale Inquiry",
+    "fullName": "Full Name",
+    "email": "Email",
+    "company": "Company Name",
+    "selectProduct": "Select Product",
+    "selectProductPlaceholder": "-- Select Product --",
+    "selectTier": "Select MOQ Tier",
+    "moq": "MOQ: {{moq}}",
+    "price": "Price: AED {{price}}/unit",
+    "quantityLabel": "Quantity (min {{min}})",
+    "estimate": "Total Estimate: AED {{total}}",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "success": "Request submitted successfully!",
+    "error": "Something went wrong. Please try again."
+  }
+
+}

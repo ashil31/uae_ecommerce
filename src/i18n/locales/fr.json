@@ -1,0 +1,584 @@
+
+{
+  "nav": {
+    "home": "Accueil",
+    "men": "Homme",
+    "women": "Femme",
+    "newIn": "Nouveautés",
+    "readyToWear": "Prêt-à-porter",
+    "accessories": "Accessoires",
+    "sale": "Soldes",
+    "about": "À propos",
+    "contact": "Contact",
+    "account": "Compte",
+    "cart": "Panier",
+    "wishlist": "Favoris",
+    "search": "Rechercher",
+    "shop": "Boutique",
+    "lookbook": "LookBook",
+  "wholesale": "Vente en gros"
+  },
+  "home": {
+    "heroTitle": "Découvrez la Mode de UAE",
+    "heroSubtitle": "Collections premium pour un style de vie moderne",
+    "shopNow": "Acheter maintenant",
+    "newArrivals": "Nouveautés",
+    "featuredProducts": "Produits en vedette",
+    "categories": "Acheter par catégorie",
+     "categoryDescription": "Découvrez nos collections soigneusement sélectionnées pour un style de vie moderne",
+    "newArrivalsSubtitle": "Découvrez nos dernières collections de luxe",
+    "popularItems":"Articles populaires",
+    "topCollection": "Notre meilleure collection",
+    "bestSeller":"Meilleure vente",
+    "luxuryTagline": "Articles de luxe sélectionnés à la main de notre collection exclusive",
+    "discoverLuxury": "Découvrez nos dernières collections de luxe",
+     "featuredLine": "Produits phares et sélections soigneusement choisies parmi nos dernières collections",
+     "trendingLine":"Produits tendance appréciés par nos clients",
+     "popularLine":"Produits tendance adorés par nos clients",
+     "seasonPopular":"Nos produits les plus populaires cette saison"
+}
+  
+  ,
+  "product": {
+    "addToCart": "Ajouter au panier",
+    "addToWishlist": "Ajouter aux favoris",
+    "removeFromWishlist": "Retirer des favoris",
+    "selectSize": "Choisir la taille",
+    "sizeGuide": "Guide des tailles",
+    "description": "Description",
+    "details": "Détails",
+    "shipping": "Livraison et retours",
+    "reviews": "Avis",
+    "relatedProducts": "Produits similaires",
+    "color": "Couleur",
+    "size": "Taille",
+    "freeShipping": "Livraison gratuite pour les commandes de plus de 500 AED",
+    "returns": "Retours sous 30 jours",
+     "reviewsTitle": "Avis des clients",
+  "noReviews": "Aucun avis pour le moment.",
+  "yourRating": "Votre note",
+  "yourReview": "Votre avis",
+  "reviewPlaceholder": "Partagez votre expérience...",
+  "submitReview": "Envoyer l'avis",
+  "loginToReview": "Veuillez ",
+  "login": "vous connecter",
+  "toLeaveReview": "pour laisser un avis.",
+  "reviewSuccess": "Avis envoyé avec succès",
+  "errorComment": "Veuillez entrer un commentaire",
+  "errorRating": "Veuillez sélectionner une note"
+  },
+  "cart": {
+    "title": "Panier d'achat",
+    "empty": "Votre panier est vide",
+    "emptyMessage": "Commencez à faire du shopping pour ajouter des articles à votre panier",
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "tax": "Taxe",
+    "checkout": "Commander",
+    "continueShopping": "Continuer les achats",
+    "quantity": "Quantité",
+    "remove": "Supprimer",
+    "orderSummary": "Résumé de la commande",
+    "freeShippingPromo": "Ajoutez {{amount}} AED de plus pour la livraison gratuite!"
+  },
+  "wishlist": {
+    "empty": "Votre liste de favoris est vide",
+    "emptyMessage": "Sauvegardez les articles que vous aimez dans votre liste de favoris",
+    "startShopping": "Commencer les achats",
+    "moveToCart": "Déplacer vers le panier",
+    "saveProgress": "Sauvegarder votre progression",
+    "loginMessage": "Connectez-vous pour sauvegarder votre liste de favoris sur tous vos appareils"
+  },
+  "shop": {
+    "filters": "Filtres",
+    "applyFilters": "Appliquer les filtres",
+    "clearFilters": "Effacer les filtres",
+    "priceRange": "Gamme de prix",
+    "brands": "Marques",
+    "colors": "Couleurs",
+    "sizes": "Tailles",
+    "newest": "Plus récent",
+    "popular": "Plus populaire",
+    "priceLowToHigh": "Prix: du plus bas au plus élevé",
+    "priceHighToLow": "Prix: du plus élevé au plus bas",
+    "itemsFound": "articles trouvés",
+    "noProducts": "Aucun produit trouvé"
+  },
+  "checkout": {
+    "contactInfo": "Informations de contact",
+    "shippingAddress": "Adresse de livraison",
+    "paymentMethod": "Méthode de paiement",
+    "creditCard": "Carte de crédit",
+    "cashOnDelivery": "Paiement à la livraison",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code postal",
+    "placeOrder": "Passer la commande",
+    "processing": "Traitement en cours...",
+    "orderPlaced": "Commande passée avec succès!",
+    "orderFailed": "Échec de la commande. Veuillez réessayer.",
+    "orderComplete": "Commande terminée!",
+    "orderCompleteMessage": "Merci pour votre commande. Nous vous enverrons un email de confirmation sous peu.",
+    "orderDetails": "Détails de la commande",
+    "orderId": "ID de commande",
+    "items": "Articles",
+    "viewOrders": "Voir mes commandes",
+    "continueShopping": "Continuer les achats"
+  },
+
+   "topCollection": {
+    "title": "Notre Meilleure Collection",
+    "subtitle": "Articles de luxe sélectionnés de notre collection exclusive",
+    "viewAll": "Voir toute la collection",
+    "addToCart": "Ajouter au panier",
+    "addedToCart": "Ajouté au panier !",
+    "addedToWishlist": "Ajouté à la liste de souhaits !",
+    "badge": {
+      "new": "Nouveau",
+      "sale": "Promotion",
+      "limited": "Limité",
+      "exclusive": "Exclusif"
+    }
+  },
+   "categories": {
+    "topCategories": "Catégories principales",
+      "MEN": "Hommes",
+    "WOMEN": "Femmes",
+     "shirts": "Chemises",
+    "handbags": "Sacs à main",
+    "clothing": "Vêtements",
+    "jackets": "Vestes",
+    "watches": "Montres",
+    "dresses": "Robes",
+    "shoes": "Chaussures",
+    "jeans": "Jeans"
+  } ,
+  "auth": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "forgotPassword": "Mot de passe oublié?",
+    "createAccount": "Créer un compte",
+    "alreadyHaveAccount": "Vous avez déjà un compte?",
+    "dontHaveAccount": "Vous n'avez pas de compte?",
+    "loginToCheckout": "Se connecter pour commander",
+    "guestCheckoutNote": "Commande en tant qu'invité disponible"
+  },
+  "account": {
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "orders": "Commandes",
+    "addresses": "Adresses",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "myAccount": "Mon compte"
+  },
+  "contact": {
+  "title": "Contactez-nous",
+  "formTitle": "Envoyez-nous un message",
+  "name": "Nom",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Envoyer le message",
+  "successMessage": "Votre message a été envoyé avec succès !",
+  "infoTitle": "Informations de contact",
+  "addressTitle": "Notre adresse",
+  "addressLine1": "123 Rue de la Mode",
+  "addressLine2": "Bâtiment B, 2ème étage",
+  "addressCity": "Dubaï",
+  "addressCountry": "Émirats Arabes Unis",
+  "phoneTitle": "Téléphone",
+  "emailTitle": "Email",
+  "hoursTitle": "Heures d'ouverture",
+  "hours": "Lun - Ven : 9h00 - 18h00"
+},
+
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "currency": "AED",
+    "free": "Gratuit",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "viewAll": "Voir tout",
+    "showMore": "Voir plus",
+    "showLess": "Voir moins",
+    "freeShipping": "Livraison gratuite pour les commandes de plus de 500 AED",
+    "returnPolicy": "Retours sous 30 jours",
+    "prev": "Produits précédents",
+    "next": "Produits suivants"
+  },
+  "storeLocator": {
+  "title": "Trouvez un magasin",
+  "searchPlaceholder": "Rechercher par nom ou emplacement",
+  "noResults": "Aucun magasin trouvé.",
+  "address": "Adresse",
+  "phone": "Téléphone",
+  "hours": "Horaires"
+},
+"payment": {
+    "successTitle": "Paiement réussi !",
+    "successMessage": "Merci pour votre achat. Un e-mail de confirmation vous a été envoyé.",
+    "continueShopping": "Continuer vos achats",
+    "cancelTitle": "Paiement annulé",
+    "cancelMessage": "Votre paiement n'a pas été complété. Vous pouvez réessayer ou retourner à la boutique.",
+    "returnToShop": "Retour à la boutique",
+    "successToast": "Votre commande a été passée avec succès !",
+    "cancelToast": "Le paiement a été annulé."
+  },
+  
+  "careers": {
+    "title": "Rejoignez notre équipe",
+    "subtitle": "Nous recherchons toujours des talents exceptionnels pour rejoindre notre aventure.",
+    "openPositions": "Postes ouverts",
+    "applyNow": "Postuler maintenant",
+    "department": "Département",
+    "location": "Lieu",
+    "noPositions": "Aucun poste disponible pour le moment.",
+    "sendResume": "Envoyez votre CV à",
+    "cta": "Vous pensez être le bon profil ?"
+  },
+  "returns": {
+    "title": "Politique de retour",
+    "intro": "Votre satisfaction est importante. Vous pouvez retourner vos articles dans les 14 jours suivant la réception.",
+    "conditionsTitle": "Conditions de retour",
+    "conditions": [
+      "Les articles doivent être non utilisés et en parfait état.",
+      "L'emballage d'origine doit être intact.",
+      "Une preuve d'achat est requise."
+    ],
+    "faqTitle": "FAQ sur les retours"
+  },
+  "shipping": {
+    "title": "Informations de livraison",
+    "delivery": "Nous offrons une livraison rapide et sécurisée dans tout les Émirats Arabes Unis.",
+    "processing": "Délai de traitement : 1 à 2 jours ouvrés.",
+    "deliveryTime": "Délai de livraison : 2 à 5 jours ouvrés.",
+    "shippingPartners": "Nos partenaires de livraison",
+    "tracking": "Vous recevrez un lien de suivi par email une fois votre commande expédiée."
+  },
+  "sizeGuide": {
+    "title": "Guide des tailles",
+    "description": "Utilisez ce tableau pour vous aider à choisir la bonne taille.",
+    "measurements": {
+      "bust": "Poitrine",
+      "waist": "Taille",
+      "hips": "Hanches"
+    }
+  },
+  "contactus": {
+    "title": "Contactez-nous",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Téléphone",
+    "formTitle": "Formulaire de contact",
+    "name": "Nom",
+    "message": "Votre message",
+    "submit": "Envoyer",
+    "successMessage": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu !"
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "questions": [
+      {
+        "q": "Comment suivre ma commande ?",
+        "a": "Une fois la commande expédiée, vous recevrez un lien de suivi par email."
+      },
+      {
+        "q": "Puis-je modifier ma commande après confirmation ?",
+        "a": "Oui, dans un délai de 1 à 2 heures après la commande. Contactez-nous rapidement !"
+      },
+      {
+        "q": "Quels modes de paiement acceptez-vous ?",
+        "a": "Nous acceptons les cartes de crédit et le paiement à la livraison aux Émirats."
+      },
+      {
+        "q": "Livrez-vous à l'international ?",
+        "a": "Actuellement, nous livrons uniquement aux Émirats Arabes Unis."
+      }
+    ]
+ 
+},
+"press": {
+  "title": "Dernières couvertures médiatiques",
+  "searchPlaceholder": "Rechercher des communiqués de presse...",
+  "categories": {
+    "all": "Tout",
+    "awards": "Récompenses",
+    "partnership": "Partenariat",
+    "launch": "Lancement"
+  },
+  "1": {
+    "title": "Meilleure marque e-commerce aux Émirats",
+    "description": "Récompensée pour son design, sa rapidité et son innovation lors de prix régionaux."
+  },
+  "2": {
+    "title": "Nouveau partenariat avec FedEx EAU",
+    "description": "Nous sommes fiers d'offrir des livraisons plus rapides et suivies à travers tous les Émirats."
+  },
+  "3": {
+    "title": "Lancement d'une ligne de mode durable",
+    "description": "Des collections éco-responsables maintenant disponibles avec livraison mondiale."
+  }
+},
+"sustainability": {
+  "title": "Notre engagement pour la durabilité",
+  "description": "Nous croyons en une mode responsable, des matériaux écologiques et un impact communautaire positif.",
+  "values": [
+    {
+      "title": "Matériaux écologiques",
+      "description": "Tous nos produits utilisent du coton biologique, des tissus recyclés et des teintures à faible impact."
+    },
+    {
+      "title": "Réduction des déchets",
+      "description": "Nous minimisons les déchets de production grâce à une découpe efficace et à la réutilisation."
+    },
+    {
+      "title": "Impact mondial",
+      "description": "Nous soutenons la livraison neutre en carbone et compensons notre empreinte environnementale."
+    },
+    {
+      "title": "Commerce équitable",
+      "description": "Nos fondations reposent sur des pratiques de travail éthiques et des partenariats communautaires."
+    }
+  ]
+},
+"privacy": {
+  "title": "Confidentialité et Protection des Données",
+  "description": "Nous nous engageons à protéger vos données personnelles et à être transparents quant à leur utilisation.",
+  "sections": [
+    {
+      "title": "Vos données sont sécurisées",
+      "description": "Nous utilisons le chiffrement et les meilleures pratiques du secteur pour garder vos informations en sécurité et privées."
+    },
+    {
+      "title": "Aucune vente de données",
+      "description": "Nous ne vendons ni ne louons jamais vos données personnelles à des tiers."
+    },
+    {
+      "title": "Transparence totale",
+      "description": "Vous pouvez consulter, modifier ou supprimer vos données à tout moment via les paramètres de votre compte."
+    },
+    {
+      "title": "Conformité mondiale",
+      "description": "Nous respectons le RGPD, le CCPA et d'autres réglementations mondiales en matière de confidentialité."
+    }
+  ]
+},
+"terms": {
+  "title": "Conditions d'utilisation",
+  "sections": {
+    "intro": {
+      "title": "Introduction",
+      "description": "En utilisant notre site Web, vous acceptez de respecter les conditions et politiques décrites ici."
+    },
+    "usage": {
+      "title": "Utilisation acceptable",
+      "description": "Vous acceptez de ne pas abuser du site ou des services, et de ne violer aucune loi."
+    },
+    "account": {
+      "title": "Comptes utilisateurs",
+      "description": "Vous êtes responsable de la confidentialité de vos identifiants et de toutes les activités liées à votre compte."
+    },
+    "limitation": {
+      "title": "Limitation de responsabilité",
+      "description": "Nous ne sommes pas responsables des dommages indirects ou accessoires résultant de l'utilisation de nos services."
+    },
+    "governingLaw": {
+      "title": "Loi applicable",
+      "description": "Ces conditions sont régies par les lois des Émirats arabes unis, sans tenir compte des conflits de lois."
+    }
+  }
+},
+"cookie": {
+  "title": "Politique de Cookies",
+  "sections": {
+    "whatAreCookies": {
+      "title": "Que sont les cookies ?",
+      "description": "Les cookies sont de petits fichiers texte stockés sur votre appareil pour aider les sites Web à fonctionner efficacement et à offrir des expériences personnalisées."
+    },
+    "howWeUseCookies": {
+      "title": "Comment nous utilisons les cookies",
+      "description": "Nous utilisons des cookies pour améliorer l'expérience utilisateur, analyser le trafic et mémoriser vos préférences."
+    },
+    "typesOfCookies": {
+      "title": "Types de cookies que nous utilisons",
+      "description": "Nous utilisons des cookies essentiels, de performance, de fonctionnalité et de ciblage pour offrir une expérience de navigation personnalisée."
+    },
+    "yourChoices": {
+      "title": "Vos choix",
+      "description": "Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur ou notre outil de consentement."
+    },
+    "changesToPolicy": {
+      "title": "Modifications de cette politique",
+      "description": "Nous pouvons mettre à jour cette politique périodiquement. Toute modification sera publiée sur cette page avec une date révisée."
+    }
+  }
+},
+
+"accessibility": {
+  "title": "Notre Engagement pour l'Accessibilité",
+  "sections": {
+    "commitment": {
+      "title": "Engagement en matière d'accessibilité",
+      "description": "Nous nous engageons à garantir l'accessibilité numérique pour tous, y compris les personnes en situation de handicap."
+    },
+    "inclusiveDesign": {
+      "title": "Conception Inclusive",
+      "description": "Notre plateforme est conçue dès le départ pour être inclusive, en tenant compte d'un large éventail de besoins et de préférences des utilisateurs."
+    },
+    "assistiveTech": {
+      "title": "Support des Technologies d'Assistance",
+      "description": "Nous prenons en charge les lecteurs d'écran, la navigation au clavier et d'autres outils d'assistance pour améliorer l'expérience utilisateur."
+    },
+    "ongoingImprovements": {
+      "title": "Améliorations Continues",
+      "description": "L'accessibilité est un processus continu. Nous testons et mettons régulièrement à jour notre site pour assurer sa conformité et sa convivialité."
+    },
+    "contactSupport": {
+      "title": "Contacter le Support",
+      "description": "Besoin d'aide ? Contactez notre équipe de support pour toute question ou commentaire lié à l'accessibilité."
+    }
+  }
+},
+"menu": {
+    "men": "Hommes",
+    "women": "Femmes",
+    "newIn": "Nouveautés",
+    "readyToWear": "Prêt-à-porter",
+    "accessories": "Accessoires",
+    "clothing": "Vêtements",
+    "featured": "En vedette",
+    "accessoriesSection": "Accessoires",
+    "collections": "Collections",
+    "shirt": "Chemise",
+    "t-shirt": "T-shirt",
+    "suit": "Costume",
+    "jacket": "Veste",
+    "trouser": "Pantalon",
+    "jeans": "Jeans",
+    "knitwear": "Maille",
+    "activewear": "Tenue de sport",
+    "watches": "Montres",
+    "bags": "Sacs",
+    "shoes": "Chaussures",
+    "belts": "Ceintures",
+    "sunglasses": "Lunettes de soleil",
+    "ties": "Cravates",
+    "dresses": "Robes",
+    "tops": "Hauts",
+    "skirts": "Jupes",
+    "pants": "Pantalons",
+    "handbags": "Sacs à main",
+    "jewelry": "Bijoux",
+    "scarves": "Écharpes",
+    "newarrivals": "Nouveautés",
+    "bestsellers": "Meilleures ventes",
+    "sale": "Promotions",
+    "lookbook": "Lookbook",
+    "allNewArrivals": "Toutes les nouveautés",
+    "thisWeek": "Cette semaine",
+    "last30Days": "Les 30 derniers jours",
+    "comingSoon": "Bientôt disponible",
+    "casual": "Décontracté",
+    "business": "Affaires",
+    "formal": "Formel",
+    "weekend": "Weekend",
+    "evening": "Soirée",
+    "springCollection": "Collection de printemps",
+    "summerCollection": "Collection d'été",
+    "designerCollections": "Collections de créateurs",
+    "backpacks": "Sacs à dos",
+    "briefcases": "Serviettes",
+    "travelBags": "Sacs de voyage",
+    "necklaces": "Colliers",
+    "bracelets": "Bracelets",
+    "earrings": "Boucles d'oreilles",
+    "rings": "Bagues"
+  },
+ 
+  "footer": {
+    "brandName": "EAU",
+    "description": "Mode haut de gamme pour un style de vie moderne. Découvrez notre collection sélectionnée de vêtements et d'accessoires de luxe.",
+    "location": "Dubai Mall, Dubaï, EAU",
+    "customerService": "Service Client",
+    "about": "À Propos",
+    "legal": "Légal",
+    "links": {
+      "contactUs": "Nous Contacter",
+      "sizeGuide": "Guide des Tailles",
+      "shippingInfo": "Informations sur la Livraison",
+      "returns": "Retours",
+      "faq": "FAQ",
+      "ourStory": "Notre Histoire",
+      "careers": "Carrières",
+      "press": "Presse",
+      "sustainability": "Durabilité",
+      "storeLocator": "Localisateur de Magasins",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions de Service",
+      "cookiePolicy": "Politique de Cookies",
+      "accessibility": "Accessibilité"
+    },
+    "copyright": "© {{year}} EAU. Tous droits réservés."
+  },
+  
+  "wholesale": {
+    "pageTitle": "Catalogue de Gros",
+    "pageDescription": "Tarification exclusive en gros pour les clients enregistrés. Quantité minimale requise.",
+    "seoTitle": "Gros - Solutions de Mode B2B | Émirats",
+    "seoDescription": "Découvrez les opportunités de vente en gros aux Émirats pour les détaillants. Commandes en gros, prix compétitifs, et collections de mode haut de gamme.",
+    "seoKeywords": "mode en gros, vêtements B2B, commandes groupées, détaillants mode Émirats",
+    "fallbackTitle": "Vente en Gros - Mode Émirats",
+    "formTitle": "Formulaire de Demande de Gros",
+    "perks": {
+      "bulkPricingTitle": "Tarifs de Gros",
+      "bulkPricingDesc": "Économisez jusqu'à 40% sur les commandes en quantité minimale",
+      "shippingTitle": "Livraison Gratuite",
+      "shippingDesc": "Disponible sur toutes les commandes en gros",
+      "paymentTitle": "Conditions de Paiement",
+      "paymentDesc": "Flexibles pour les entreprises vérifiées"
+    },
+    "moq": "Quantité min. : {{count}} unités",
+    "availability": {
+      "inStock": "En stock",
+      "limitedStock": "Stock limité"
+    },
+    "bulkPricingLabel": "Tarification en Gros",
+    "minQty": "Min {{count}} : {{price}} AED",
+    "requestQuote": "Demander un devis",
+    "customSolutionsTitle": "Besoin de solutions personnalisées ?",
+    "customSolutionsDesc": "Contactez notre équipe pour les grandes commandes, les collaborations ou des plans tarifaires personnalisés.",
+    "contactTeam": "Contacter l’équipe de vente en gros"
+  },
+  
+  "wholesaleForm": {
+    "title": "Demande de vente en gros",
+    "fullName": "Nom complet",
+    "email": "Email",
+    "company": "Nom de l'entreprise",
+    "selectProduct": "Sélectionner un produit",
+    "selectProductPlaceholder": "-- Sélectionner un produit --",
+    "selectTier": "Sélectionnez le palier MOQ",
+    "moq": "MOQ : {{moq}}",
+    "price": "Prix : {{price}} AED/unité",
+    "quantityLabel": "Quantité (min {{min}})",
+    "estimate": "Estimation totale : {{total}} AED",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours...",
+    "success": "Demande envoyée avec succès !",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  }
+
+
+
+
+}
+
