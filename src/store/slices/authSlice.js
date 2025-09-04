@@ -45,9 +45,9 @@ export const refreshToken = createAsyncThunk(
       return response.data;
       
       // Update stored tokens
-      localStorage.setItem('accessToken', response.data.accessToken);
+      // localStorage.setItem('accessToken', response.data.accessToken);
       
-      return response.data;
+      // return response.data;
     } catch (error) {
       // If refresh fails, clear tokens
       localStorage.removeItem('accessToken');
