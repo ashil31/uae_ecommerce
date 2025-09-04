@@ -68,16 +68,15 @@ const mobileMenuContent = {
   ],
 };
 
-// Refactored AccordionItem component
+// AccordionItem for mobile menu
 const AccordionItem = ({ item, isOpen, onToggle, onLinkClick }) => {
-  // This now gets the array of LINK objects directly.
   const submenuLinks = mobileMenuContent[item.key] || [];
 
   if (!item.hasSubmenu) {
     return (
       <Link
         to={item.href}
-        className="block text-base font-medium text-gray-700 hover:text-black py-2"
+        className="block text-lg font-semibold tracking-wide text-gray-800 transition-all duration-300 ease-in-out hover:text-black py-2"
         onClick={onLinkClick}
       >
         {item.label}
@@ -85,7 +84,6 @@ const AccordionItem = ({ item, isOpen, onToggle, onLinkClick }) => {
     );
   }
 
-  // If it has a submenu, render the accordion button and the simplified list.
   return (
     <div>
       <button
@@ -102,12 +100,12 @@ const AccordionItem = ({ item, isOpen, onToggle, onLinkClick }) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden pl-4" // Indent the entire sub-menu
+            className="overflow-hidden pl-4"
           >
             <div className="space-y-2 py-4 pl-2 border-l-2 border-gray-200">
               {submenuLinks.map((link) => (
                 <Link
-                  key={link.key} // The key is now on the Link itself
+                  key={link.key}
                   to={link.href}
                   onClick={onLinkClick}
                   className="block text-gray-600 hover:text-black"
@@ -128,7 +126,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
 
-  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const { isAuthenticated } = useSelector((state) => state.auth);
   const { totalItems } = useSelector((state) => state.cart);
   const { items: wishlistItems } = useSelector((state) => state.wishlist);
   const { mobileMenuOpen, isSearchOpen } = useSelector((state) => state.ui);
@@ -203,7 +201,7 @@ const Header = () => {
       href: "/shop/sale",
       hasSubmenu: false,
     },
-     {
+    {
       key: "leathergoods",
       label: t("nav.leathergoods"),
       href: "/shop/leathergoods",
@@ -217,27 +215,27 @@ const Header = () => {
     },
   ];
 
+  // Header bg: transparent on top of homepage, black after scroll or on other pages
   const getHeaderStyles = () => {
-    // if (isHomePage) {
-    //   return scrolled
-    //     ? 'bg-black backdrop-blur-md shadow-lg border-b border-gray-100'
-    //     : 'bg-transparent';
-    // }
-    return "bg-black backdrop-blur-md shadow-sm border-b border-gray-100";
+    if (isHomePage) {
+      return scrolled
+        ? "bg-black backdrop-blur-md shadow-md"
+        : "bg-transparent";
+    }
+    return "bg-black backdrop-blur-md shadow-md";
   };
 
+  // Text styles
   const getTextStyles = () => {
     if (isHomePage && !scrolled) {
       return {
         text: "text-white",
-        hover: "hover:text-white/80",
-        border: "border-white/30",
+        hover: "hover:text-white",
       };
     }
     return {
       text: "text-white",
-      hover: "hover:text-white/80",
-      border: "border-gray-200",
+      hover: "hover:text-white/90",
     };
   };
 
@@ -262,7 +260,6 @@ const Header = () => {
               onClick={() => dispatch(toggleMobileMenu())}
               aria-label="Toggle mobile menu"
             >
-              {/* {mobileMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />} */}
               {mobileMenuOpen ? (
                 <FiX className="h-7 w-7 sm:h-5 sm:w-5" />
               ) : (
@@ -287,7 +284,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse">
+            <nav className="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse">
               {navItems.map((item) => (
                 <div
                   key={item.key}
@@ -299,10 +296,17 @@ const Header = () => {
                 >
                   <Link
                     to={item.href}
-                    className={`${textStyles.text} ${textStyles.hover} transition-all duration-500 font-medium tracking-wide text-sm uppercase relative py-2`}
+                    className={`
+                      ${textStyles.text}
+                      transition-all duration-300 ease-in-out
+                      font-medium tracking-wide text-sm uppercase
+                      relative inline-flex items-center px-4 py-2 rounded-full
+                      hover:bg-black/70 hover:text-white
+                    `}
                   >
                     {item.label}
                   </Link>
+
                   {item.hasSubmenu && hoveredMenu === item.key && (
                     <AnimatePresence>
                       <MegaMenu
@@ -323,27 +327,24 @@ const Header = () => {
             >
               <motion.button
                 onClick={() => dispatch(toggleSearch())}
-                className={`p-2 rounded-full ${textStyles.text} ${textStyles.hover} hover:bg-black/5`}
+                className={`p-2 rounded-full ${textStyles.text} hover:bg-black/5 transition-colors duration-300`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Search"
               >
-                <FiSearch
-                  // size={18}
-                  className="h-7 w-7 sm:h-5 sm:w-5"
-                />
+                <FiSearch className="h-7 w-7 sm:h-5 sm:w-5" />
               </motion.button>
 
               <Link
                 to={isAuthenticated ? "/account" : "/login"}
-                className={`hidden md:inline-flex p-2  rounded-full ${textStyles.text} ${textStyles.hover} hover:bg-black/5`}
+                className={`hidden md:inline-flex p-2 rounded-full ${textStyles.text} hover:bg-black/5 transition-colors duration-300`}
               >
                 <FiUser size={18} />
               </Link>
 
               <Link
                 to="/wishlist"
-                className={`relative hidden md:inline-flex p-2 rounded-full ${textStyles.text} ${textStyles.hover} hover:bg-black/5`}
+                className={`relative hidden md:inline-flex p-2 rounded-full ${textStyles.text} hover:bg-black/5 transition-colors duration-300`}
               >
                 <FiBookmark size={18} />
                 {wishlistItems.length > 0 && (
@@ -359,7 +360,7 @@ const Header = () => {
 
               <button
                 onClick={() => dispatch(toggleCart())}
-                className={`relative p-2 rounded-full ${textStyles.text} ${textStyles.hover} hover:bg-black/5`}
+                className={`relative p-2 rounded-full ${textStyles.text} hover:bg-black/5 transition-colors duration-300`}
               >
                 <FiShoppingBag className="h-7 w-7 sm:h-5 sm:w-5" />
                 {isAuthenticated && totalItems > 0 && (
@@ -377,7 +378,6 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {/* <AnimatePresence> */}
         {mobileMenuOpen && (
           <>
             <div
@@ -390,36 +390,32 @@ const Header = () => {
               } h-screen w-full z-[9999] max-w-xs bg-[#f7f5f1] shadow-2xl lg:hidden overflow-y-auto`}
             >
               <div className="p-6 m-8">
-                 <button onClick={() => dispatch(toggleMobileMenu())}
-                  className="absolute top-6 right-6">
-                    <FiX size={20} />
-                  </button>
-                <div className="flex items-center justify-between mb-8  p-4">
-                  <h2 className="text-lg font-medium">
-                    {/* {t("nav.menu") || "Menu"} */}
-                  </h2>
-                  {/* <button onClick={() => dispatch(toggleMobileMenu())}>
-                    <FiX size={20} />
-                  </button> */}
+                <button
+                  onClick={() => dispatch(toggleMobileMenu())}
+                  className="absolute top-6 right-6"
+                >
+                  <FiX size={20} />
+                </button>
+
+                <div className="flex items-center justify-between mb-8 p-4">
+                  <h2 className="text-lg font-medium"></h2>
                 </div>
 
                 {/* sign in button */}
-                <div >
+                <div>
                   <div className="m-2 py-2">
                     <LanguageSelector />
                   </div>
-                  <Link
-                    to={isAuthenticated ? "/account" : "/login"}
-                    // className="block w-full bg-black text-white py-3 px-4 text-center font-medium rounded-md"
+                  <Link to={isAuthenticated ? "/account" : "/login"}>
+                    <button
+                      type="button"
+                      className="m-3 block w-full bg-black text-white py-3 px-4 text-center font-medium rounded-md"
                     >
-                  <button
-                    type="button"
-                    className="m-3 block w-full bg-black text-white py-3 px-4 text-center font-medium rounded-md"
-                  >
-                    Sign In / Register
-                  </button>
+                      Sign In / Register
+                    </button>
                   </Link>
                 </div>
+
                 <nav className="space-y-4 p-4">
                   {navItems.map((item) => (
                     <AccordionItem
@@ -458,7 +454,13 @@ const Header = () => {
             />
           </>
         )}
-        {/* </AnimatePresence> */}
+
+        <div
+          className={`pointer-events-none absolute inset-x-0 top-0 h-28 sm:h-32 lg:h-40 bg-gradient-to-b from-black/80 via-black/40 to-transparent transition-opacity duration-500
+    ${isHomePage && !scrolled ? "opacity-100" : "opacity-0"}
+    -z-10
+  `}
+        ></div>
       </header>
 
       <SearchComponent

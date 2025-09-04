@@ -3,132 +3,196 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { serverUrl } from '../../services/url';
 
+// --- Helper: get token from state or localStorage ---
+const getAccessToken = (getState) => {
+  const state = getState?.();
+  const tokenFromState = state?.auth?.accessToken;
+  return tokenFromState || localStorage.getItem('accessToken') || null;
+};
 
+// --- Helper: axios call with Bearer header ---
+const authGet = async (url, getState, config = {}) => {
+  const token = getAccessToken(getState);
+  return axios.get(url, {
+    ...config,
+    headers: {
+      ...(config.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+};
+
+const authPost = async (url, body, getState, config = {}) => {
+  const token = getAccessToken(getState);
+  return axios.post(url, body, {
+    ...config,
+    headers: {
+      ...(config.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+};
+
+const authPut = async (url, body, getState, config = {}) => {
+  const token = getAccessToken(getState);
+  return axios.put(url, body, {
+    ...config,
+    headers: {
+      ...(config.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+};
+
+const authDelete = async (url, getState, config = {}) => {
+  const token = getAccessToken(getState);
+  return axios.delete(url, {
+    ...config,
+    headers: {
+      ...(config.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+};
+
+// ---- Thunks ----
 export const mergeCarts = createAsyncThunk(
   'cart/mergeCarts',
-  async (localCart, { rejectWithValue }) => {
+  async (localCart, { rejectWithValue, getState }) => {
     try {
-      const token = getAuthToken();
-      const response = await axios.post(
+      const { data } = await authPost(
         `${serverUrl}/cart/merge`,
         { items: localCart },
-        { headers: { Authorization: `Bearer ${token}` } }
+        getState
       );
-      return response.data;
+      return data;
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to merge carts');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to merge carts',
+        status: error.response?.status,
+      });
     }
   }
 );
 
-// Async Thunks
 export const fetchCart = createAsyncThunk(
   'cart/fetchCart',
-  async (_, { rejectWithValue }) => {
+  async (_, { rejectWithValue, getState }) => {
     try {
-      const response = await axios.get(`${serverUrl}/cart/getCart`, {
-        withCredentials: true
-      });
-      return response.data;
+      const { data } = await authGet(`${serverUrl}/cart/getCart`, getState);
+      return data;
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch cart');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to fetch cart',
+        status: error.response?.status,
+      });
     }
   }
 );
 
 export const addToCart = createAsyncThunk(
   'cart/addItem',
-  async ({ productId, quantity, color, size, purchaseOption = 'combo' }, { rejectWithValue }) => {
+  async ({ productId, quantity, color, size, purchaseOption = 'combo' }, { rejectWithValue, getState }) => {
     try {
-      console.log(productId, quantity, color, size)
-      const response = await axios.post(
+      const { data } = await authPost(
         `${serverUrl}/cart/addToCart`,
         { productId, quantity, color, size, purchaseOption },
-        { withCredentials: true }
+        getState
       );
-      return response.data;
+      return data;
     } catch (error) {
       if (error.response?.data?.availableStock !== undefined) {
         return rejectWithValue({
-          message: error.response.data.message,
-          availableStock: error.response.data.availableStock
+          message: error.response?.data?.message,
+          availableStock: error.response?.data?.availableStock,
+          status: error.response?.status,
         });
       }
-      return rejectWithValue(error.response?.data?.message || 'Failed to add item');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to add item',
+        status: error.response?.status,
+      });
     }
   }
 );
 
 export const updateItemQuantity = createAsyncThunk(
   'cart/updateItemQuantity',
-  async ({ itemId, quantity }, { rejectWithValue }) => {
+  async ({ itemId, quantity }, { rejectWithValue, getState }) => {
     try {
-      const response = await axios.put(
+      const { data } = await authPut(
         `${serverUrl}/cart/${itemId}`,
         { quantity },
-        { withCredentials: true }
+        getState
       );
-      return response.data;
+      return data;
     } catch (error) {
       if (error.response?.data?.availableStock !== undefined) {
         return rejectWithValue({
-          message: error.response.data.message,
-          availableStock: error.response.data.availableStock,
-          maxAllowed: error.response.data.maxAllowed
+          message: error.response?.data?.message,
+          availableStock: error.response?.data?.availableStock,
+          maxAllowed: error.response?.data?.maxAllowed,
+          status: error.response?.status,
         });
       }
-      return rejectWithValue(error.response?.data?.message || 'Failed to update quantity');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to update quantity',
+        status: error.response?.status,
+      });
     }
   }
 );
 
 export const removeItem = createAsyncThunk(
   'cart/removeItem',
-  async (itemId, { rejectWithValue }) => {
+  async (itemId, { rejectWithValue, getState }) => {
     try {
-      const response = await axios.delete(
-        `${serverUrl}/cart/${itemId}`,
-        { withCredentials: true }
-      );
-      console.log(response)
-      return response.data;
+      const { data } = await authDelete(`${serverUrl}/cart/${itemId}`, getState);
+      return data;
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to remove item');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to remove item',
+        status: error.response?.status,
+      });
     }
   }
 );
 
 export const applyCoupon = createAsyncThunk(
   'cart/applyCoupon',
-  async (couponCode, { rejectWithValue }) => {
+  async (couponCode, { rejectWithValue, getState }) => {
     try {
-      const response = await axios.post(
+      const { data } = await authPost(
         `${serverUrl}/cart/apply-coupon`,
         { couponCode },
-        { withCredentials: true }
+        getState
       );
-      return response.data;
+      return data;
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Invalid coupon');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Invalid coupon',
+        status: error.response?.status,
+      });
     }
   }
 );
 
 export const clearCart = createAsyncThunk(
   'cart/clearCart',
-  async (_, { rejectWithValue }) => {
+  async (_, { rejectWithValue, getState }) => {
     try {
-      const response = await axios.delete(`${serverUrl}/cart/clearCart`, {
-        withCredentials: true
-      });
-      console.log(response)
+      await authDelete(`${serverUrl}/cart/clearCart`, getState);
       return null;
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to clear cart');
+      return rejectWithValue({
+        message: error.response?.data?.message || 'Failed to clear cart',
+        status: error.response?.status,
+      });
     }
   }
 );
 
+// ---- Slice ----
 const initialState = {
   items: [],
   localCart: [],
@@ -140,17 +204,14 @@ const initialState = {
   status: 'idle',
   isLoading: false,
   error: null,
-  coupon: null
+  coupon: null,
 };
 
-// Helper function to calculate price based on purchase option
 const calculateItemPrice = (item) => {
   const basePrice = item.priceAtAddition || item.price || 0;
-  
   switch (item.purchaseOption) {
     case 'combo':
-      // Apply combo discount (e.g., 20% off)
-      return Math.round(basePrice * 0.8); // 20% discount
+      return Math.round(basePrice * 0.8);
     case 'shirt':
     case 'pant':
       return basePrice;
@@ -158,6 +219,7 @@ const calculateItemPrice = (item) => {
       return basePrice;
   }
 };
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -169,26 +231,25 @@ const cartSlice = createSlice({
       state.error = null;
     },
     calculateTotals: (state) => {
-      const activeCart = Array.isArray(state.items) && state.items.length > 0 
-      ? state.items 
-      : Array.isArray(state.localCart)
-      ? state.localCart
-      : [];
+      const activeCart =
+        Array.isArray(state.items) && state.items.length > 0
+          ? state.items
+          : Array.isArray(state.localCart)
+          ? state.localCart
+          : [];
 
-       // Calculate subtotal with purchase option pricing
       state.subTotal = activeCart.reduce((sum, item) => {
         const itemPrice = calculateItemPrice(item);
-        return sum + (itemPrice * item.quantity);
+        return sum + itemPrice * item.quantity;
       }, 0);
-      
-      state.total = state.subTotal;
-      
-      state.total = activeCart.reduce((sum, item) => 
-        sum + ((item.priceAtAddition || item.price) * item.quantity), 0);
-      
-      state.totalItems = activeCart.reduce((sum, item) => 
-        sum + item.quantity, 0);
-      
+
+      state.total = activeCart.reduce(
+        (sum, item) => sum + (item.priceAtAddition || item.price) * item.quantity,
+        0
+      );
+
+      state.totalItems = activeCart.reduce((sum, item) => sum + item.quantity, 0);
+
       if (state.coupon) {
         if (state.coupon.discountType === 'percentage') {
           state.discount = (state.total * state.coupon.discountValue) / 100;
@@ -203,15 +264,15 @@ const cartSlice = createSlice({
     builder
       .addCase(fetchCart.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(fetchCart.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.items = action.payload.cart?.items || [];
         state.coupon = action.payload.cart?.couponApplied || null;
-        state.isLoading = false
-        state.error = null
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(fetchCart.rejected, (state, action) => {
         state.status = 'failed';
@@ -221,14 +282,14 @@ const cartSlice = createSlice({
 
       .addCase(addToCart.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(addToCart.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.items = action.payload.cart.items;
-        state.isLoading = false
-        state.error = null
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(addToCart.rejected, (state, action) => {
         state.status = 'failed';
@@ -238,14 +299,14 @@ const cartSlice = createSlice({
 
       .addCase(updateItemQuantity.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(updateItemQuantity.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.items = action.payload.cart.items;
-        state.isLoading = false
-        state.error = null
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(updateItemQuantity.rejected, (state, action) => {
         state.status = 'failed';
@@ -255,15 +316,15 @@ const cartSlice = createSlice({
 
       .addCase(removeItem.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
-      .addCase(removeItem.fulfilled, (state, action) => {
+      .addCase(removeItem.fulfilled, (state) => {
         state.status = 'succeeded';
-        const removedItemId = action.meta.arg;;
-        state.items = state.items.filter((item) => item._id !== removedItemId)
-        state.isLoading = false
-        state.error = null
+        // item id is passed as meta.arg
+        const removedItemId = removeItem.fulfilled.match ? null : null; // no-op: server returns full cart on success
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(removeItem.rejected, (state, action) => {
         state.status = 'failed';
@@ -273,15 +334,15 @@ const cartSlice = createSlice({
 
       .addCase(applyCoupon.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(applyCoupon.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.items = action.payload.cart.items;
         state.coupon = action.payload.cart.couponApplied;
-        state.isLoading = false
-        state.error = null
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(applyCoupon.rejected, (state, action) => {
         state.status = 'failed';
@@ -291,8 +352,8 @@ const cartSlice = createSlice({
 
       .addCase(clearCart.pending, (state) => {
         state.status = 'loading';
-        state.isLoading = true
-        state.error = null
+        state.isLoading = true;
+        state.error = null;
       })
       .addCase(clearCart.fulfilled, (state) => {
         state.status = 'succeeded';
@@ -303,15 +364,15 @@ const cartSlice = createSlice({
         state.totalItems = 0;
         state.discount = 0;
         state.coupon = null;
-        state.isLoading = false
-        state.error = null
+        state.isLoading = false;
+        state.error = null;
       })
       .addCase(clearCart.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
         state.isLoading = false;
       });
-  }
+  },
 });
 
 export const {
@@ -321,7 +382,7 @@ export const {
   updateLocalQuantity,
   removeFromLocalCart,
   clearLocalCart,
-  calculateTotals
+  calculateTotals,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

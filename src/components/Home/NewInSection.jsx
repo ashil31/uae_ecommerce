@@ -55,7 +55,7 @@ const NewInSection = ({ products }) => {
             className="flex  items-center space-x-6"
           >
             <Link
-              to="/shop/new-in"
+              to="/shop"
               className="text-sm md:text-base font-medium hover:underline tracking-wide transition-all duration-300"
             >
               {t('common.viewAll')}
